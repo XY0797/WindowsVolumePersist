@@ -1,7 +1,7 @@
 #pragma once
 
 // µ÷ÊÔÄ£Ê½
-#define DEBUGMOD
+//#define DEBUGMOD
 
 #ifdef DEBUGMOD
 #define DEBUGOUTPUT(LOGCONTENT) debuglog(LOGCONTENT)

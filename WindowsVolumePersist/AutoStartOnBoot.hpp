@@ -15,9 +15,7 @@
 bool IsAppAutoStartEnabled() {
 	HKEY hKey;
 	if (RegOpenKeyEx(HKEY_CURRENT_USER, L"Software\\Microsoft\\Windows\\CurrentVersion\\Run", 0, KEY_READ, &hKey) == ERROR_SUCCESS) {
-		char path[MAX_PATH];
-		DWORD size = sizeof(path);
-		if (RegQueryValueEx(hKey, APPNAME, NULL, NULL, (LPBYTE)path, &size) == ERROR_SUCCESS) {
+		if (RegQueryValueEx(hKey, APPNAME, NULL, NULL, NULL, NULL) == ERROR_SUCCESS) {
 			RegCloseKey(hKey);
 			return true;
 		}
