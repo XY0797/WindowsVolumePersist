@@ -1,7 +1,6 @@
 #pragma once
 
-// µ÷ÊÔÄ£Ê½
-//#define DEBUGMOD
+#include "DebugLogbase.h"
 
 #ifdef DEBUGMOD
 #define DEBUGOUTPUT(LOGCONTENT) debuglog(LOGCONTENT)
@@ -32,8 +31,10 @@ std::string wstr2astr(const std::wstring& wstr) {
 #include <chrono>
 #include <ctime>
 #include <iomanip>
+#include "CurrentDir.h"
+
 void debuglog(std::string content, bool israw = false) {
-	std::ofstream logFile("log.txt", std::ios_base::app);
+	std::ofstream logFile(logfilename, std::ios_base::app);
 	if (logFile.is_open()) {
 		if (israw) {
 			logFile << content;

@@ -27,14 +27,14 @@
 // 开机自启
 #include "AutoStartOnBoot.hpp"
 
+// 当前目录
+#include "CurrentDir.h"
+
 // 音量设置结构体
 struct audioSetting {
 	float vol; // 音量
 	bool mute; // 是否静音
 };
-
-// 存音量设置的文件名
-const char* filename = "volumedata.txt";
 
 // 窗口句柄
 HWND hwnd;

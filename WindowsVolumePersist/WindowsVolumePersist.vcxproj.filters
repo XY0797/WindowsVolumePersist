@@ -21,6 +21,9 @@
     <ClCompile Include="AudioAPI.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="CurrentDir.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mybase64.hpp">
@@ -60,6 +63,12 @@
       <Filter>源文件</Filter>
     </ClInclude>
     <ClInclude Include="AutoStartOnBoot.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CurrentDir.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugLogbase.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

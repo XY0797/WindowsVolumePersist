@@ -132,6 +132,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AudioAPI.cpp" />
+    <ClCompile Include="CurrentDir.cpp" />
     <ClCompile Include="WindowsVolumePersist.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -145,7 +146,9 @@
     <ClInclude Include="base64\parse_error.hpp" />
     <ClInclude Include="base64\raw_result_buffer.hpp" />
     <ClInclude Include="base64\stream_codec.hpp" />
+    <ClInclude Include="CurrentDir.h" />
     <ClInclude Include="DebugLog.hpp" />
+    <ClInclude Include="DebugLogbase.h" />
     <ClInclude Include="mybase64.hpp" />
     <ClInclude Include="WindowsVolumePersist.h" />
   </ItemGroup>

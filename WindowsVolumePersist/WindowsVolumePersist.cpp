@@ -28,7 +28,7 @@ void readVolume() {
 	DIDmap.clear();
 	isNeedSave = false;
 
-	std::ifstream file(filename);
+	std::ifstream file(savefilename);
 	if (!file) {
 		// 文件打开失败
 		return;
@@ -85,7 +85,7 @@ void readVolume() {
  */
 void saveVolume() {
 	// 打开文件以覆盖现有内容（如果存在则清空）
-	std::ofstream outfile(filename, std::ios_base::out | std::ios_base::trunc);
+	std::ofstream outfile(savefilename, std::ios_base::out | std::ios_base::trunc);
 
 	// 检查文件是否成功打开
 	if (outfile.is_open()) {
@@ -230,6 +230,8 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 	_In_ LPWSTR    lpCmdLine,
 	_In_ int       nCmdShow)
 {
+	refreshCurDir();
+	
 	// 注册窗口类
 	const wchar_t CLASS_NAME[] = L"Sample Window Class";
 
